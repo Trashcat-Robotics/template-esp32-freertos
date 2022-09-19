@@ -51,3 +51,12 @@ repos:
     rev: 2.6.1
     hooks:
     -   id: editorconfig-checker
+
+-   repo: local
+    hooks:
+    - id: idf_build
+      name: Build ESP32 Project
+      description: Builds the ESP32 Project
+      entry: make build
+      language: system
+
