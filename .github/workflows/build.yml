@@ -1,0 +1,15 @@
+name: ESP32 Project Build
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build ESP32 Project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make build
