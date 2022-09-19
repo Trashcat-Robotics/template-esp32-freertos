@@ -30,9 +30,9 @@ interactive:
 	@$(call docker_run,,--interactive)
 
 hooks:
-	@$(call docker_run,pre-commit install)
+	pre-commit install
 
-build:
+build: hooks
 	@$(call idf_run,build)
 
 clean:
@@ -43,9 +43,6 @@ fullclean:
 
 flash:
 	@$(call idf_run,flash -p $(port),--device=$(port))
-
-test:
-	@$(call idf_run,test)
 
 # Tests
 editorconfig-test:
