@@ -1,0 +1,15 @@
+name: Style Checks
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  codestyle:
+    name: Code Style check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make style-test
