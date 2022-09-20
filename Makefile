@@ -1,4 +1,4 @@
-DOCKER_NAME := droid
+DOCKER_NAME := template-esp32-freertos
 CARGO_INCREMENTAL ?= 1
 RUSTC_BOOTSTRAP ?= 0
 BUILD_IMAGE_NAME ?= ghcr.io/trashcat-robotics/devtools/esp32-cmake
