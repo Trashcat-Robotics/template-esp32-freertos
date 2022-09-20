@@ -5,10 +5,14 @@
 1) Replace "template-esp32-freertos" in the following files:
 - `README.md` (above)
 - `<root>/CMakeLists.txt`
+- `<root>/Makefile`
 
 ## Build & Upload
 
 ```bash
+# Install requirements
+pip install -r requirements.txt
+
 # Build
 make build
 
